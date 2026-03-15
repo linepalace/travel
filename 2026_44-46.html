@@ -9,7 +9,17 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
         body { font-family: 'Noto Sans TC', sans-serif; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        .active-tab { background-color: #059669; color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        
+        /* 移除 X 與 Y 軸偏移，改為中心擴散陰影 */
+        .centered-shadow-lg { 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+        }
+        
+        .active-tab { 
+            background-color: #059669; 
+            color: white; 
+            box-shadow: 0 0 12px rgba(5, 150, 105, 0.4); 
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 pb-12">
@@ -32,8 +42,8 @@
     </div>
 
     <div class="max-w-4xl mx-auto px-4 -mt-10">
-        <!-- Tabs -->
-        <div class="flex bg-white p-1.5 rounded-2xl shadow-xl mb-6 overflow-x-auto no-scrollbar">
+        <!-- Tabs Container (Shadow changed to centered) -->
+        <div class="flex bg-white p-1.5 rounded-2xl centered-shadow-lg mb-6 overflow-x-auto no-scrollbar">
             <button onclick="switchDay(0)" id="btn-0" class="flex-1 py-3 px-4 rounded-xl text-center min-w-[90px] transition-all active-tab">
                 <div class="text-[10px] opacity-80 uppercase">Day 1</div>
                 <div class="font-bold text-sm">4/4 (六)</div>
@@ -61,7 +71,7 @@
                     </div>
 
                     <div id="timeline" class="space-y-6 relative before:content-[''] before:absolute before:left-[1.1rem] before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-100">
-                        <!-- Steps will be injected here -->
+                        <!-- Steps injected by JS -->
                     </div>
                 </div>
                 
@@ -80,7 +90,7 @@
                                 </tr>
                             </thead>
                             <tbody id="bus-table-body" class="divide-y divide-slate-700">
-                                <!-- Table rows injected here -->
+                                <!-- Rows injected by JS -->
                             </tbody>
                         </table>
                     </div>
@@ -171,7 +181,6 @@
             document.getElementById('day-desc').innerText = day.desc;
             document.getElementById('day-icon').innerText = day.icon;
 
-            // Update Tabs UI
             [0, 1, 2].forEach(i => {
                 const btn = document.getElementById(`btn-${i}`);
                 if (i === index) {
@@ -183,7 +192,6 @@
                 }
             });
 
-            // Update Timeline
             const timeline = document.getElementById('timeline');
             timeline.innerHTML = day.steps.map(s => `
                 <div class="relative pl-10">
@@ -198,7 +206,6 @@
                 </div>
             `).join('');
 
-            // Update Bus Table
             const table = document.getElementById('bus-table-body');
             table.innerHTML = day.bus.map(b => `
                 <tr class="hover:bg-slate-700/50 transition-colors">
@@ -225,7 +232,6 @@
             setTimeout(() => document.body.removeChild(toast), 2000);
         }
 
-        // Initialize
         window.onload = () => switchDay(0);
     </script>
 </body>
