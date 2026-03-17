@@ -41,9 +41,14 @@
             <h1 class="text-3xl md:text-5xl font-bold mb-3 tracking-tight">清境與合歡北峰</h1>
             <p class="text-emerald-100 text-base md:text-lg max-w-xl opacity-90">三天兩夜大眾運輸交通指南：附帶詳細取票與退票規範。</p>
             
-            <button onclick="copyLink()" class="mt-6 flex items-center gap-2 bg-white text-emerald-800 px-5 py-2.5 rounded-xl font-bold hover:bg-emerald-50 transition-all shadow-lg text-sm cursor-pointer">
-                <span>🔗</span> 分享文字行程
-            </button>
+            <div class="flex flex-wrap gap-3 mt-6">
+                <button onclick="copyLink()" class="flex items-center gap-2 bg-white text-emerald-800 px-5 py-2.5 rounded-xl font-bold hover:bg-emerald-50 transition-all shadow-lg text-sm cursor-pointer">
+                    <span>🔗</span> 分享文字行程
+                </button>
+                <a href="https://docs.google.com/spreadsheets/d/1TZrfXled3-inwGAX3X7y67XQTtREmT3_uTaNXNnsNGg/edit?usp=sharing" target="_blank" class="flex items-center gap-2 bg-emerald-700/60 text-white px-5 py-2.5 rounded-xl font-bold hover:bg-emerald-700 transition-all shadow-lg text-sm cursor-pointer">
+                    <span>📊</span> 查看預算花費表
+                </a>
+            </div>
         </div>
         <div class="absolute -bottom-1 right-0 left-0 h-12 bg-slate-50" style="clip-path: polygon(0 100%, 100% 100%, 100% 0, 85% 60%, 70% 20%, 55% 70%, 40% 10%, 25% 60%, 0 0)"></div>
     </div>
@@ -296,8 +301,8 @@
                 date: '4/6 (一)', title: '歸途：清境 ➔ 台北', desc: '漫步青青草原，避開塞車高峰返家。', icon: '🐑',
                 steps: [
                     { time: '07:00-09:00', act: '飯店提供早餐', det: '國民賓館餐廳用餐', link: '', info: '<p class="text-xs text-slate-600 leading-relaxed">最後一天悠閒享用早餐。餐後可先至櫃台辦理退房並寄存行李，再前往青青草原。</p>' },
-                    { time: '09:00', act: '青青草原、找午餐', det: '漫步草原，欣賞綿羊秀', link: 'https://www.qingjing-farm.com.tw/about/', linkTitle: '清境農場導覽', info: infoTexts.nationalHotel },
-                    { time: '12:30', act: '南投客運-回程', det: '注意需提早12:00至站牌等候，下山後可以買點心避免錯過晚餐', link: 'http://www.ntbus.com.tw/cjfm.html', linkTitle: '南投客運時刻表', info: infoTexts.day3ReturnBus },
+                    { time: '09:00', act: '青青草原導覽', det: '漫步草原，欣賞綿羊秀', link: 'https://www.qingjing-farm.com.tw/about/', linkTitle: '清境農場導覽', info: infoTexts.nationalHotel },
+                    { time: '12:30', act: '南投客運-回程', det: '國民賓館 ➔ 埔里站 (提早一班搭乘)', link: 'http://www.ntbus.com.tw/cjfm.html', linkTitle: '南投客運時刻表', info: infoTexts.day3ReturnBus },
                     { time: '15:30', act: '國光客運 1832（已訂）', det: '埔里站 ➔ 台北轉運站', link: 'https://www.kingbus.com.tw/', linkTitle: '國光客運官網', info: infoTexts.kuokuang }
                 ],
                 bus: [{ line: '南投客運', f: '07:20', l: '18:20' }, { line: '國光 1832', f: '05:30', l: '21:00' }]
