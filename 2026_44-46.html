@@ -22,7 +22,7 @@
             transition: max-height 0.3s ease-out, padding 0.3s ease;
         }
         .accordion-content.active {
-            max-height: 1500px; /* 增加最大高度以容納放大後的文字 */
+            max-height: 1500px;
             padding-top: 1rem;
             padding-bottom: 0.5rem;
         }
@@ -34,18 +34,14 @@
 
     <!-- Header -->
     <div class="bg-emerald-800 text-white pt-12 pb-24 px-6 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto relative z-10">
-            <!-- 字級由 text-xs/sm 提升至 text-sm/base -->
+        <div class="max-w-6xl mx-auto relative z-10">
             <div class="inline-flex items-center gap-2 mb-4 bg-emerald-700/50 px-4 py-1.5 rounded-full text-sm md:text-base">
                 <span>📅</span> 2026/04/04 - 04/06 (清明連假)
             </div>
-            <!-- 字級由 text-3xl/6xl 提升至 text-4xl/7xl -->
             <h1 class="text-4xl md:text-7xl font-bold mb-4 tracking-tight">清境與合歡北峰</h1>
-            <!-- 字級由 text-base/xl 提升至 text-lg/2xl -->
             <p class="text-emerald-100 text-lg md:text-2xl max-w-2xl opacity-90 leading-relaxed">三天兩夜大眾運輸交通指南：附帶詳細取票與退票規範。</p>
             
             <div class="flex flex-wrap gap-4 mt-8">
-                <!-- 按鈕字級由 text-sm/base 提升至 text-base/lg -->
                 <button onclick="copyLink()" class="flex items-center gap-2 bg-white text-emerald-800 px-6 py-3 rounded-xl font-bold hover:bg-emerald-50 transition-all shadow-lg text-base md:text-lg cursor-pointer">
                     <span>🔗</span> 分享文字行程
                 </button>
@@ -57,8 +53,8 @@
         <div class="absolute -bottom-1 right-0 left-0 h-16 bg-slate-50" style="clip-path: polygon(0 100%, 100% 100%, 100% 0, 85% 60%, 70% 20%, 55% 70%, 40% 10%, 25% 60%, 0 0)"></div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 -mt-50" style="margin-top: 50px;">
-        <!-- Tabs (字級同步提升) -->
+    <div class="max-w-6xl mx-auto px-4 -mt-50" style="margin-top: 50px;">
+        <!-- Tabs -->
         <div class="flex bg-white p-2 rounded-2xl centered-shadow-lg mb-8 overflow-x-auto no-scrollbar border border-slate-100">
             <button onclick="switchDay(0)" id="btn-0" class="flex-1 py-4 px-4 rounded-xl text-center min-w-[110px] transition-all active-tab cursor-pointer">
                 <div class="text-xs md:text-sm opacity-80 uppercase font-medium">Day 1</div>
@@ -80,9 +76,7 @@
                 <div id="content-card" class="bg-white p-7 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
                     <div class="flex justify-between items-start mb-10 text-emerald-600">
                         <div>
-                            <!-- 字級由 text-xl/2xl 提升至 text-2xl/3xl -->
                             <h2 id="day-title" class="text-2xl md:text-4xl font-bold text-slate-800">載入中...</h2>
-                            <!-- 字級由 text-sm/base 提升至 text-base/lg -->
                             <p id="day-desc" class="text-slate-500 text-base md:text-xl mt-2 leading-relaxed"></p>
                         </div>
                         <div class="bg-emerald-50 p-4 md:p-6 rounded-2xl text-2xl md:text-4xl" id="day-icon">🚌</div>
@@ -99,7 +93,6 @@
                         <span class="text-emerald-400">🕒</span> 當日關鍵班次 (預估)
                     </h3>
                     <div class="overflow-x-auto">
-                        <!-- 表格字級由 text-xs/sm 提升至 text-sm/base -->
                         <table class="w-full text-left text-sm md:text-lg">
                             <thead class="bg-slate-700 text-slate-400">
                                 <tr>
@@ -124,7 +117,7 @@
                     <a href="https://ntbus.welcometw.com/tour/listAll?category=5bM" target="_blank" class="block text-center bg-orange-600 hover:bg-orange-700 transition-colors text-white py-4 rounded-xl text-base md:text-lg font-bold shadow-sm">前往南投假期預約</a>
                 </div>
                 
-                <!-- Packing List Updated Fonts -->
+                <!-- Packing List -->
                 <div class="bg-white p-7 md:p-8 rounded-[2rem] shadow-sm border border-slate-100">
                     <h3 class="font-bold text-slate-800 mb-8 text-base md:text-xl flex items-center gap-2">
                         ℹ️ 應備物品清單
@@ -172,7 +165,6 @@
     </footer>
 
     <script>
-        // JS 中的文字樣式也同步調大一個級距
         const infoTexts = {
             kuokuang: `
                 <div class="space-y-5 text-sm md:text-base leading-relaxed text-slate-700">
@@ -199,7 +191,7 @@
                         <p class="font-bold text-slate-800 mb-2 border-b border-slate-200 pb-1">📍 步行動線 & 策略</p>
                         <p>國光客運埔里站抵達後，步行約 15 分鐘即可抵達<b>南投客運總站</b>（首發站）。</p>
                         <p class="text-orange-700 font-bold mt-2">⚠️ 連假排隊策略：</p>
-                        <p>清明連假往清境遊客極多，中間站牌常客滿。強烈建議務必步行至總站排隊，確保能順利上車。</p>
+                        <p>清明連假期間往清境遊客極多，中間站牌常客滿。強烈建議務必步行至總站排隊，確保能順利上車。</p>
                     </div>
                     <div>
                         <p class="font-bold text-slate-800 mb-2 border-b border-slate-200 pb-1">🍱 埔里午餐建議</p>
@@ -220,16 +212,31 @@
                     </div>
                     <p class="bg-blue-50 p-3 md:p-4 rounded-lg border border-blue-100">
                         <b>💳 票價與加值：</b><br>
-                        單程刷卡票價約為 <b>108 元</b>。山區加值不便，請預先確認餘額。
+                        單程刷卡票價約為 <b>108 元</b>。山區加值不便，請於上山前預先確認餘額充足。
                     </p>
                 </div>`,
             nationalHotel: `
                 <div class="text-sm md:text-base text-slate-600 space-y-4">
                     <p>Ꮚˊ•⌔•ˋᏊ</p>
                     <div class="bg-emerald-50 p-4 md:p-5 rounded-lg border border-emerald-200">
-                        <p class="font-bold text-emerald-800 mb-2 border-b border-slate-200 pb-1">🗺️ 園區導覽：</p>
+                        <p class="font-bold text-emerald-800 mb-2 border-b border-slate-200 pb-1">🗺️ 園區地圖：</p>
                         <p>建議下載「清境農場導覽地圖」了解青青草原、步道與旅館相對位置。</p>
                         <a href="https://www.qingjing-farm.com.tw/about/" target="_blank" class="text-blue-600 font-medium underline mt-1 inline-block">點此查看導覽地圖</a>
+                    </div>
+                </div>`,
+            greenGrasslandEval: `
+                <div class="text-sm md:text-base text-slate-600 space-y-4 leading-relaxed">
+                    <div class="bg-emerald-50 p-4 md:p-5 rounded-xl border border-emerald-200 shadow-sm">
+                        <p class="font-bold text-emerald-800 mb-2 border-b border-emerald-200 pb-1">🚶 步行往返時長評估：</p>
+                        <p>• <b>單程去程 (上坡)：</b>從國民賓館步行至"青青草原北門入口"，經步步高升步道約需 <b>45 分鐘</b>，建議叫車或搭公車(車程順利的話10min)。</p>
+                        <p>• <b>單程回程 (下坡)：</b>約需 <b>45 分鐘</b>。</p>
+                        <p>• <b>來回總計：</b>單純走路時間約 <b>90 分鐘</b>。</p>
+                    </div>
+                    <div class="bg-slate-100 p-4 md:p-5 rounded-xl border border-slate-200">
+                        <p class="font-bold text-slate-800 mb-2 border-b border-slate-200 pb-1">⏰ 節奏建議：</p>
+                        <p>1. <b>出發青青草原：</b>步行建議最晚 <b>08:40</b> 從賓館出發，才能趕上 <b>09:30</b> 的綿羊秀。</p>
+                        <p>2. <b>回程取件：</b>為預留緩衝，最晚須於 <b>11:20</b> 從青青草原南門離開回程。</p>
+                        <p>3. <b>行李搭車：</b>預估 12:00 回到賓館取行李，並於 <b>12:20</b> 至站牌候車銜接 12:30 班次。</p>
                     </div>
                 </div>`,
             dinnerPlan: `
@@ -296,7 +303,7 @@
                 steps: [
                     { time: '07:00-09:00', act: '飯店提供早餐', det: '國民賓館餐廳用餐', link: '', info: `<p class="text-sm md:text-base text-slate-600 leading-relaxed">早餐供應時間為 07:00-09:00。<br><b class="text-orange-700">⚠️ 提醒：</b>需銜接 08:20 的公車，建議 07:00 準時用餐。</p>` },
                     { time: '08:20', act: '南投客運 6658A', det: '國民賓館 ➔ 小風口 (務必預約)', link: 'https://ntbus.welcometw.com/tour/listAll?category=5bM', linkTitle: '6658A 線上預約', info: `<p class="text-sm md:text-base text-slate-600">連假期間此班次極度熱門，請準時候車。</p>` },
-                    { time: '09:40', act: '抵達小風口', det: '整裝、步行至北峰登山口', link: 'https://hiking.biji.co/index.php?q=review&act=info&review_id=17145', linkTitle: '小風口路況心得', info: `<p class="text-sm md:text-base text-slate-600">小風口有提供簡易飲食與廁所。建議參考健行筆記路況。</p>` },
+                    { time: '09:40', act: '抵達小風口', det: '整裝、步行至北峰登山口', link: 'https://hiking.biji.co/index.php?q=review&act=info&review_id=17145', linkTitle: '小風口路況心得', info: `<p class="text-sm md:text-base text-slate-600">小風口遊客服務中心有提供簡易飲食與廁所。建議參考健行筆記路況。</p>` },
                     { time: '10:00', act: '攀登合歡北峰', det: '百岳編號 34，絕美高山展望', link: 'http://tw.hiking.biji.co/index.php?q=trail&act=detail&id=288', linkTitle: '北峰步道詳細資訊', info: infoTexts.hikingHehuan },
                     { time: '15:50', act: '回程末班車', det: '小風口 ➔ 國民賓館', link: '', info: `<p class="text-sm md:text-base text-orange-700 font-bold">⚠️ 務必於 15:30 前回到站牌。高山天氣變化快，若起霧請提早下撤。</p>` }
                 ],
@@ -305,9 +312,9 @@
             {
                 date: '4/6 (一)', title: '歸途：清境 ➔ 台北', desc: '漫步青青草原，避開塞車高峰返家。', icon: '🐑',
                 steps: [
-                    { time: '07:00-09:00', act: '飯店提供早餐', det: '國民賓館餐廳用餐', link: '', info: `<p class="text-sm md:text-base text-slate-600 leading-relaxed">悠閒享用早餐後，可辦理退房並寄存行李。</p>` },
-                    { time: '09:00', act: '青青草原導覽', det: '漫步草原，欣賞綿羊秀', link: 'https://www.qingjing-farm.com.tw/about/', linkTitle: '清境農場導覽', info: infoTexts.nationalHotel },
-                    { time: '12:30', act: '南投客運-回程', det: '國民賓館 ➔ 埔里站 (提早下山)', link: 'http://www.ntbus.com.tw/cjfm.html', linkTitle: '南投客運時刻表', info: infoTexts.day3ReturnBus },
+                    { time: '07:00-09:00', act: '飯店提供早餐', det: '國民賓館餐廳用餐', link: '', info: `<p class="text-sm md:text-base text-slate-600 leading-relaxed">最後一天悠閒享用早餐。餐後可先辦理退房寄存行李。</p>` },
+                    { time: '09:00-11:45', act: '青青草原', det: '漫步草原，欣賞綿羊秀 (09:30)', link: 'https://www.qingjing-farm.com.tw/about/', linkTitle: '清境農場導覽', info: infoTexts.greenGrasslandEval },
+                    { time: '12:30', act: '南投客運-回程', det: '國民賓館 ➔ 埔里站 (12:30 發車)', link: 'http://www.ntbus.com.tw/cjfm.html', linkTitle: '南投客運時刻表', info: infoTexts.day3ReturnBus },
                     { time: '15:30', act: '國光客運 1832（已訂）', det: '埔里站 ➔ 台北轉運站', link: 'https://www.kingbus.com.tw/', linkTitle: '國光客運官網', info: infoTexts.kuokuang }
                 ],
                 bus: [{ line: '南投客運', f: '07:20', l: '18:20' }, { line: '國光 1832', f: '05:30', l: '21:00' }]
@@ -381,7 +388,7 @@
         }
 
         function copyLink() {
-            const text = "【2026 清境合歡北峰行程】\nDay 1: 台北-清境 (07:20出發，12:35南投客運)\nDay 2: 挑戰合歡北峰 (6658A需預約)\nDay 3: 青青草原-台北 (下山提早至12:30)";
+            const text = "【2026 清境合歡北峰行程】\nDay 1: 台北-清境 (07:20出發，12:35南投客運)\nDay 2: 挑戰合歡北峰 (6658A需預約)\nDay 3: 青青草原-台北";
             const el = document.createElement('textarea');
             el.value = text;
             document.body.appendChild(el);
@@ -391,7 +398,7 @@
             
             const toast = document.createElement('div');
             toast.innerText = "✅ 行程文字已複製到剪貼簿！";
-            toast.style.cssText = "position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background-color:#064e3b; color:white; padding:14px 28px; border-radius:9999px; z-index:1000; font-size:16px; font-weight:500; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);";
+            toast.style.cssText = "position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background-color:#064e3b; color:white; padding:12px 24px; border-radius:9999px; z-index:1000; font-size:16px; font-weight:500; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);";
             document.body.appendChild(toast);
             setTimeout(() => {
                 toast.style.opacity = '0';
