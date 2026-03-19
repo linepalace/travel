@@ -239,6 +239,15 @@
                         <p>3. <b>銜接：</b>12:00 回賓館取行李，<b>12:20</b> 至站牌銜接 12:30 班次。</p>
                     </div>
                 </div>`,
+            dinnerDay2: `
+                <div class="text-xs md:text-sm text-slate-600 space-y-3">
+                    <p><b>🍲 晚餐安排：</b>春大地火鍋城</p>
+                    <div class="bg-emerald-50 p-4 md:p-4 rounded-lg border border-emerald-200">
+                        <p class="font-bold text-emerald-800 mb-2 border-b border-slate-200 pb-1">🚐 接駁資訊：</p>
+                        <p>餐廳似乎提供<b>免費接駁服務</b>，可以提早先致電預約確認，減輕下山後的體力負擔。</p>
+                        <p class="mt-2 text-slate-700 font-bold">📞 預約電話：<a href="tel:0968662200" class="text-blue-600 underline">0968-662-200</a></p>
+                    </div>
+                </div>`,
             dinnerPlan: `
                 <div class="text-xs md:text-sm text-slate-600 space-y-3">
                     <p><b>🍴 晚餐安排：</b>原鄉食堂提供原住民風味料理（已完成訂位）。</p>
@@ -270,9 +279,9 @@
                     <div class="bg-slate-100 p-3.5 md:p-4 rounded-xl border border-slate-200">
                         <p class="font-bold mb-2.5 text-slate-700 border-b border-slate-200 pb-1">🕒 下山參考班次：</p>
                         <div class="grid grid-cols-3 gap-2 text-center">
-                            <div class="p-1.5 bg-white rounded border border-slate-200"><div class="text-[10px] md:text-xs text-slate-400">前一班</div><div class="font-bold text-sm md:text-lg">11:10</div></div>
-                            <div class="p-1.5 bg-emerald-100 rounded border border-emerald-200"><div class="text-[10px] md:text-xs text-emerald-600">預定</div><div class="font-bold text-sm md:text-lg text-emerald-800">12:30</div></div>
-                            <div class="p-1.5 bg-white rounded border border-slate-200"><div class="text-[10px] md:text-xs text-slate-400">後一班</div><div class="font-bold text-sm md:text-lg">13:10</div></div>
+                            <div class="p-1.5 bg-white rounded border border-slate-200"><div class="text-[10px] md:text-xs text-slate-400">前一班</div><div class="font-bold text-sm md:text-base">11:10</div></div>
+                            <div class="p-1.5 bg-emerald-100 rounded border border-emerald-200"><div class="text-[10px] md:text-xs text-emerald-600">預定</div><div class="font-bold text-sm md:text-base text-emerald-800">12:30</div></div>
+                            <div class="p-1.5 bg-white rounded border border-slate-200"><div class="text-[10px] md:text-xs text-slate-400">後一班</div><div class="font-bold text-sm md:text-base">13:10</div></div>
                         </div>
                     </div>
                 </div>`,
@@ -303,9 +312,10 @@
                 steps: [
                     { time: '07:00-09:00', act: '飯店提供早餐', det: '國民賓館餐廳用餐', link: '', info: `<p class="text-xs md:text-sm text-slate-600 leading-relaxed">早餐供應時間為 07:00-09:00。<br><b class="text-orange-700">⚠️ 提醒：</b>需銜接 08:20 的公車，建議 07:00 準時用餐。</p>` },
                     { time: '08:20', act: '南投客運 6658A', det: '國民賓館 ➔ 小風口 (務必預約)', link: 'https://ntbus.welcometw.com/tour/listAll?category=5bM', linkTitle: '6658A 線上預約', info: `<p class="text-xs md:text-sm text-slate-600">連假期間此班次極度熱門，請準時候車。</p>` },
-                    { time: '09:40', act: '抵達小風口', det: '整裝、步行至北峰登山口', link: 'https://hiking.biji.co/index.php?q=review&act=info&review_id=17145', linkTitle: '小風口路況心得', info: `<p class="text-xs md:text-sm text-slate-600">小風口遊客中心有提供簡易飲食與廁所。建議參考健行筆記路況。</p>` },
+                    { time: '09:40', act: '抵達小風口', det: '整裝、步行至北峰登山口', link: 'https://hiking.biji.co/index.php?q=review&act=info&review_id=17145', linkTitle: '小風口路況心得', info: `<p class="text-xs md:text-sm text-slate-600">小風口遊客服務中心有提供簡易飲食與廁所。建議參考健行筆記路況。</p>` },
                     { time: '10:00', act: '攀登合歡北峰', det: '百岳編號 34，絕美高山展望', link: 'http://tw.hiking.biji.co/index.php?q=trail&act=detail&id=288', linkTitle: '北峰步道詳細資訊', info: infoTexts.hikingHehuan },
-                    { time: '15:50', act: '回程末班車', det: '小風口 ➔ 國民賓館', link: '', info: `<p class="text-xs md:text-sm text-orange-700 font-bold">⚠️ 務必於 15:30 前回到站牌。高山天氣變化快，若起霧請提早下撤。</p>` }
+                    { time: '15:50', act: '回程末班車', det: '小風口 ➔ 國民賓館', link: '', info: `<p class="text-xs md:text-sm text-orange-700 font-bold">⚠️ 務必於 15:30 前回到站牌。高山天氣變化快，若起霧請提早下撤。</p>` },
+                    { time: '17:00', act: '春大地火鍋城 (已訂)', det: '登山後的暖心火鍋', link: 'https://maps.app.goo.gl/A5i7Lc3M6Hjf4Qhx7', linkTitle: '火鍋店位置導航', info: infoTexts.dinnerDay2 }
                 ],
                 bus: [{ line: '6658A (去)', f: '08:20', l: '14:30' }, { line: '6658A (回)', f: '09:40', l: '15:50' }]
             },
@@ -388,7 +398,7 @@
         }
 
         function copyLink() {
-            const text = "【2026 清境合歡北峰行程】\nDay 1: 台北-清境 (07:20出發，12:35南投客運)\nDay 2: 挑戰合歡北峰 (6658A需預約)\nDay 3: 青青草原-台北";
+            const text = "【2026 清境合歡北峰行程】\nDay 1: 台北-清境 (07:20出發，12:35南投客運)\nDay 2: 挑戰合歡北峰 (6658A需預約，晚餐春大地火鍋)\nDay 3: 青青草原-台北";
             const el = document.createElement('textarea');
             el.value = text;
             document.body.appendChild(el);
